@@ -1,3 +1,8 @@
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 body {
   margin: 0 10% 0 10%;
   background-image: url("./images/topography.svg"),
@@ -6,15 +11,41 @@ body {
   padding: 5px;
 }
 
+.slanted-background {
+  height: 150px;
+  width: 105vw;
+  z-index: -1;
+  background: #222222a8;
+  position: absolute;
+  transform: rotate(-2deg) translate(-11%, -146px);
+  border: 5px solid #1f1f1f;
+  opacity: 0.9;
+}
+
+.slanted-background2 {
+  height: 5px;
+  width: 155vw;
+  z-index: -2;
+  background: #22222256;
+  position: absolute;
+  transform: rotate(20deg) translate(-500px, 144px);
+  opacity: 0.9;
+}
+
 .header {
   text-transform: uppercase;
   text-shadow: 1px 1px 10px #2c2c2c;
 }
 
 .header h1 {
+  transform: rotate(-2deg);
   font-size: 3em;
   margin-bottom: 0px;
   margin-top: 50px;
+}
+
+.header p {
+  transform: rotate(-2deg);
 }
 
 h2 {
@@ -30,6 +61,30 @@ h2 {
 hr {
   border-color: rgba(173, 216, 230, 0.9);
   box-shadow: 3px 3px 10px 1px #22222231;
+}
+
+//highlight
+
+.highlight-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 10px;
+  justify-content: center;
+  align-content: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 3px 3px 10px 1px #222222;
+  transition-duration: 300ms;
+  text-align: center;
+  transition-timing-function: ease-in-out;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.highlight-container:hover {
+  opacity: 0.7;
 }
 
 //navbar
@@ -124,4 +179,71 @@ hr {
 
 .container:hover {
   opacity: 0.7;
+}
+
+.container:active {
+  opacity: 0.4;
+}
+
+// Contact Form
+
+.contact-me {
+  text-align: center;
+  background: rgba(31, 31, 31, 0.521);
+  color: white;
+  text-shadow: 1px 1px 10px #2c2c2c8e;
+  font-weight: 100;
+  padding-top: 10px;
+  margin: 40px 0 0 0;
+  border-radius: 5px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template: auto auto auto auto;
+  grid-gap: 5px;
+}
+
+.descriptor {
+  justify-self: right;
+  padding-right: 10px;
+  padding-top: 5px;
+}
+
+.form-input,
+textarea,
+.form-submit {
+  width: 70%;
+}
+
+.form-input {
+  border-right: 4px solid white;
+  height: 2em;
+  background: white;
+}
+
+textarea {
+  height: 8em;
+  resize: none;
+  background: white;
+}
+
+.form-submit {
+  width: 70.8%;
+  height: 3em;
+  margin-bottom: 40px;
+  justify-self: left;
+  background: rgba(0, 139, 139, 0.582);
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 3px 3px 10px 1px #22222231;
+  border-radius: 2px;
+}
+
+.form-submit:hover {
+  background: #22222277;
+  box-shadow: 6px 6px 10px 1px #22222231;
 }
